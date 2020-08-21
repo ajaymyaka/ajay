@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>remove elements right of the array</p>
+
+<button onclick="abc()">Click</button>
+
+<p id="test"></p>
+
+<script>
+
+var names = ["ram", "vinay", "suresh" , "raghu" ,"kiran","sanjay","lavan"];
+document.getElementById("test").innerHTML = names;
+
+function abc() {
+  names.splice(4,2);
+  document.getElementById("test").innerHTML = names;
+}
+</script>
+
+
+</body>
+</html>
