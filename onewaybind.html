@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html >
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script type="text/javascript">
+
+var app = angular.module('ngap', []);
+
+app.controller('ngcntrl', function ($scope) {
+
+$scope.details = '--ABVK--';
+$scope.names ='';
+$scope.donations=''
+
+});
+
+</script>
+<style>
+body{
+background-color:yellow;
+}
+</style>
+
+</head>
+
+<body ng-app="ngap">
+
+<div ng-controller="ngcntrl">
+
+<center><h1 style ="color:red"> ORGANISATION:   {{ details }} </h1></center>
+
+Total Members <input type ="text" ng-bind ="names">
+ Donations <input type ="text" ng-bind ='donations'>
+ 
+ 
+ 
+</div>
+
+</body>
+
+</html>

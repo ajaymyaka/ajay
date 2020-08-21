@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+
+  <script src="//code.angularjs.org/1.8.0/angular.min.js"></script>
+  <script>
+  
+  (function(angular) {
+    'use strict';
+  angular.module('logExample', [])
+    .controller('LogController', ['$scope', '$log', function($scope, $log) {
+      $scope.$log = $log;
+      $scope.message = 'Hello World!';
+    }]);
+  })(window.angular);
+
+</script>
+
+  
+</head>
+
+<body ng-app="logExample">
+  <div ng-controller="LogController">
+  <p>Reload this page with open console, enter text and hit the log button...</p>
+  <label>Message:
+  <input type="text" ng-model="message" /></label>
+  <button ng-click="$log.log(message)">log</button>
+</div>
+</body>
+</html>

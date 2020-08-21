@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="app">
+    
+  <div ng-controller="Ctrl">
+    
+    <button ng-click="smng()">show</button>
+	 <h1> {{msg}} </h1>
+	 
+   </div>  
+   
+   
+   <div ng-controller="apcntrl">
+     <button ng-click ="smg()">hide</button>
+	 
+	<h2> {{msg}}
+</div>
+
+<script>
+
+var app = angular.module("app", []);
+
+app.controller("Ctrl", function($scope, $rootScope){
+  
+  
+  $rootScope.smng = function(){
+ 
+    $rootScope.msg='hello';
+  }
+  
+ }); 
+ 
+ app.controller ("apcntrl" , function ($scope , $rootScope) {
+  $rootScope.smg = function(){
+  $rootScope.msg='';
+  
+ 
+  }
+  });
+ 
+ 
+ 
+</script>
+</body>
+</html>
+
+
+

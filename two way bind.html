@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script type="text/javascript">
+
+var app = angular.module('ngapp', []);
+
+app.controller('ngcntrl', function ($scope) {
+
+$scope.name = '';
+$scope.marks ='';
+$scope.table='';
+$scope.table1='';
+
+});
+
+</script>
+</head>
+
+<body ng-app="ngapp">
+
+<div ng-controller="ngcntrl">
+
+Enter Name : <input type="text" ng-model="name" style="width:250px; background-color:red ;color:white"  />
+<p>Entered Name:   {{ name }}</p>
+
+<div>enter marks :<input type ="number" ng-model="marks" /></div>
+
+
+<p> enetered marks : {{marks}} </p>
+
+<table border="1" width="10px">
+<tr>
+<th>Ajay</th>
+<th>Ram</th>
+</tr>
+<tr>
+<td><input type ="text" ng-model ="table" > </td> <p> Ajay: {{table}}</p>
+
+<td><input type ="text" ng-model ="table1" ></td> <p> Ram : {{table1}} </p>
+</tr>
+</table>
+
+</div>
+
+</body>
+
+</html>
